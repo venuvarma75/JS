@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+    <p id="p4"></p>
+    <p id="p5"></p>
+    <p id="p6"></p>
+    <p id="p7"></p>
+    <p id="p8"></p>
+    <p id="p9"></p>
+    <p id="p10"></p>
+     
+    <script>
+        /*Task 1: take prompt and Convert to Uppercase*/
+
+    let input=prompt('please give your input').toUpperCase();
+    let para1=document.getElementById('p1');
+    para1.innerText=input;
+    document.body.append(para1);
+
+    /*Task 2: take prompt and Convert to Lowercase*/
+    let input2=prompt('please give your input').toLowerCase();
+    let para2=document.getElementById('p2');
+    para2.innerText=input2;
+    document.body.append(para2);
+
+    /*Task 3: take prompt and Reverse a String
+hints: use split and reverse and join method*/
+     let input3=prompt('please your your name').split("").reverse().join("");
+     let para3=document.getElementById('p3');
+     para3.innerText=input3;
+     document.body.append(para3);
+
+     /*Task 4: take prompt and Count the number of vowels in a string--
+hints use match method*/
+  let input4=prompt('enter the word');
+  let use=input4.match(/[aieou]/ig);
+  let para4=document.getElementById('p4');
+  para4.value=use;
+ document.body.append(para4);
+
+  /*task 1: Username Validation
+Scenario: Validate a username based on specific criteria. Task:
+Prompt the user to enter a username.
+Check if the username contains characters in between 5 to 15 long.
+Display a message indicating whether the username is valid or not.*/
+let userName=prompt('enter your sweet name');
+console.log(userName.length);
+if(userName.length<5){
+    let value1='please enter the name that name length should be in between 5to 15';
+    let para5=document.getElementById('p5');
+    para5.innerText=value1;
+    document.body.append(para5);
+}
+else{
+    let value='thank you for entering correct length';
+    let para6=document.getElementById('p6');
+    para6.innerText=value;
+    document.body.append(para6);
+ 
+}
+
+
+   /*Task 2: Email Formatter
+Scenario: Format an email address. Task:
+Prompt the user to enter their first and last name.
+Convert the names to lowercase and concatenate them with a dot in between.
+concat “@gmail.com” to the result and display the formatted email address.
+inp: jenny and joy
+out: jenny.joy@gmail.com*/
+let firstName=prompt('enter your first name').toLowerCase().trim();
+let lastName=prompt('enter your last name').toLowerCase().trim();
+let gmail=`${firstName}.${lastName}@gmail.com`;
+let para7=document.getElementById('p7');
+para7.innerText=gmail;
+document.body.append(para7);
+
+   /*Task 3: Word Counter
+Scenario: Count the number of words in a sentence. Task:
+Prompt the user to enter a sentence.
+Split the sentence into words and count them.
+Display the word count.
+Hint: use split and length method*/
+
+let sentence=prompt('enter a sentence');
+let sentence1=sentence.split(" ").length;
+let para8=document.getElementById('p8');
+para8.innerText=sentence1;
+document.body.append(para8)
+
+
+  /*Task 4: Palindrome Checker
+Scenario: Check if a given string is a palindrome. Task:
+Prompt the user to enter a string.
+Check if the string reads the same forwards and backwards.
+Display a message indicating whether the string is a palindrome
+Hints : use split,join, reverse method in arrays
+inp:john
+out: not a palandrome
+inp:dad
+out:it is a palandrome*/
+
+let checkPalindrome=prompt('enter your word');
+if(checkPalindrome.split("").reverse().join("")==checkPalindrome){
+    let a='it is a palindrome';
+    let para9=document.getElementById('p9');
+    para9.innerText=a;
+    document.body.append(para9)
+}
+else{
+    let b='it is not a palindrome';
+    let para10=document.getElementById('p10');
+    para10.innerText=b;
+    document.body.append(para10)
+}
+</script>
+</body>
+</html>
+</body>
+</html>

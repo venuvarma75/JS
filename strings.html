@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+   /* str="good morning"
+    console.log(str.toUpperCase());
+    str="VERY BEAUTIFULL"
+    console.log(str.toLowerCase());
+
+    let str1=prompt("enter a upper case")   
+     console.log(str1.toUpperCase());
+    let str2=prompt("enter a lower case")
+    console.log(str2.toLowerCase());
+
+ var str="Hello world"
+ temp=""
+ for (i of str){
+temp=i+temp
+console.log(temp)
+ }
+ var str1="Good Morning"
+ console.log(str1[3]);
+
+ var str2=prompt("  reverse  a string")
+ console.log(str2.split("").reverse().join(""))
+
+
+ var str3=prompt("count the number of vowels")
+ console.log(str3.match(/[aeiou]/ig))*/
+
+ //validate user name
+ function validateUsername() {
+    let username=prompt("enter a username") 
+        if (username.length >=5 && username.length <=15) {
+            alert("username is valid");
+        }else{
+            alert("username is not valid");
+        }
+    }
+validateUsername();
+
+ function formatemail() {
+    let firstname =prompt("enter  your first name");
+    let lastname =prompt("enter  your last name");
+
+    let email = firstname.toLowerCase() + "." + lastname.toLowerCase() + "." + "@gmail.com"
+     alert("Your formatted email is:" + email);
+    }
+ formatemail();
+   //wordcounter//
+      
+
+ let sentance=prompt("count the number of words in a sentance");
+    console.log(sentance.split(""));
+
+ 
+
+ 
+
+  function countWords() {
+    let sentence = prompt("Enter a sentence:");
+    let words = sentence.split(""); // Using regular expression to split by any whitespace
+    let wordCount = words.length;
+    alert("The number of words in the sentence is: " + wordCount);
+}
+countWords();
+
+//pladaroine//
+  let inputstring=prompt("Enter a string");
+   console.log(inputstring.split("").reverse().join(""));
+
+ 
+
+ function checkPalindrome() {
+    
+    let inputString = prompt("Enter a string:");
+    let reversedString = inputString.split('').reverse().join('');
+    if (inputString === reversedString) {
+        alert("It is a palindrome.");
+    } else {
+        alert("It is not a palindrome.");
+    }
+}
+checkPalindrome();
+
+
+
+
+  
+
+
+
+    
+
+
+ 
+
+</script>
+</body>
+</html>
