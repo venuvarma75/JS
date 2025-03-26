@@ -1,0 +1,275 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+    <script>
+          //arithmetic operators//
+        var a=4
+        b=5
+        console.log(a+b);
+       
+        var a=4
+        b=5
+        console.log(a-b);
+
+        var a=4
+        b=5
+        console.log(a*b);
+
+        var a=4
+        b=5
+        console.log(a/b);
+        
+        var a=4
+        b=5
+        console.log(a%b);
+
+        var a=4
+        a++
+        console.log(a);
+
+        var a=4
+        --a
+        console.log(a);
+
+        var a=4
+        a--
+        console.log(a);
+
+        var a=4
+        ++a
+        console.log(a);
+
+        var a=5
+        console.log(a**2)
+
+
+
+   
+    //assignment operators//
+      
+       let x=10
+       x+=13;
+       console.log(x);
+
+       let y=20
+       y-=10;
+       console.log(y);
+
+       var z=10
+       z*=20
+       console.log(z);
+
+       var z=12
+       z/=6
+       console.log(z);
+
+       const f=20
+       console.log(f);
+       
+       var a=10
+       a%=5
+       console.log(a);
+
+    //comparison operators//
+
+       let k=10
+        l=5
+       console.log(k==l);
+
+       let k1=100
+        l1=50+50
+       console.log(k1==l1);
+
+       let i=50
+       j="50"
+       console.log(i===j);
+
+       let i1=100
+       j1=50+50
+      console.log(i1===j1);
+
+       var a=5
+       b=5
+       console.log(a!=b);
+
+       var a=10
+       b="10"
+       console.log(a!==b);
+
+       var a=10
+       b=15
+       console.log(a>b);
+
+       var a=15
+       b=30
+       console.log(a<b);
+
+       var a=20
+       b=30
+       console.log(a>=b);
+
+       var a=20
+       b=30
+       console.log(a<=b);
+    
+       let age = 18;
+       let result = (age >= 18) ? "Adult" : "Minor";
+       console.log(result);
+
+       let age1 = 18;
+       let result1 = (age1 >=20) ? "Adult" : "Minor";
+       console.log(result1);
+        
+    /* Write a JavaScript script that uses the ternary 
+       operator to determine if a number is even or odd.*/
+
+       let num=15
+       let res=(15%2==0)? "even": "odd"
+       console.log(res)
+
+       var a=8
+       var b=(a%2==0)? "even": "odd"
+       console.log(b)
+
+       var a=5
+       var b=(a<0)? "negative": "positive"
+       console.log(b)
+
+       var a=-5
+       var b=(a<0)? "negative": "positive"
+       console.log(b)
+
+
+    /* <!-- Expand the script to include a ternary operation 
+       that checks if a user is an adult (18+) or a minor. -->*/
+
+        var a=25
+        var b=(a>=18)? "adult":"minor"
+        console.log(b)
+
+        var a=13
+        var b=(a>=18)? "adult":"minor"
+        console.log(b)
+
+        var a=18
+        var b=(a>=18)? "adult":"minor"
+        console.log(b)
+
+
+    /* Grade Classification: Declare a variable score and 
+        set it to a value between 0 and 100.
+         Use nested ternary operators to classify the score 
+         into grades: A (>= 90), B (>= 75), C (>= 60), D (>= 45),
+          and F (below 45). Log the grade.*/
+
+        var score=55;
+        var grade=(score >=90)? "a":
+                  (score >=75)? "b":
+                  (score >=60)? "c":
+                  (score >=45)? "d":
+                  (score >=15)? "e":"f";
+        console.log(grade)          
+
+        var score=10;
+        var grade=(score >=90)? "a":
+                  (score >=75)? "b":
+                  (score >=60)? "c":
+                  (score >=45)? "d":
+                  (score >=15)? "e":"f";
+        console.log(grade)          
+       
+        var score=45;
+        var grade=(score >=90)? "a":
+                  (score >=75)? "b":
+                  (score >=60)? "c":
+                  (score >=45)? "d":
+                  (score >=15)? "e":"f";
+        console.log(grade)     
+        
+    /* Temperature Check: Declare a variable temperature and 
+        use nested ternary operators to categorize it as "Hot" (above 30), 
+        "Warm" (20-30), "Cool" (10-19), and "Cold" (below 10).
+         Log the result. */
+       
+        var a=8;
+        var temp=(a>30)? "hot":
+        (a>=20)? "warm":
+        (a>=10)? "cool":
+                  "cold";
+        console.log(temp)
+
+        var a=17;
+        var temp=(a>30)? "hot":
+        (a>=20)? "warm":
+        (a>=10)? "cool":
+                  "cold";
+        console.log(temp)
+
+        var a=25;
+        var temp=(a>30)? "hot":
+        (a>=20)? "warm":
+        (a>=10)? "cool":
+                  "cold";
+        console.log(temp)
+
+        var a=40;
+        var temp=(a>30)? "hot":
+        (a>=20)? "warm":
+        (a>=10)? "cool":
+                  "cold";
+        console.log(temp)
+
+        var a=15;
+        var temp=(a>30)? "hot":
+                 (a>=20)? "warm":
+                 (a>=10)? "cool":
+                           "cold";
+        console.log(temp)
+
+    /*Age Group: Declare a variable age and 
+        use the ternary operator to classify the age into
+         "Child" (0-12), "Teen" (13-19), "Adult" (20-64), 
+         and "Senior" (65 and above). Log the result.*/
+
+        var a=2;
+        var age2=(a>=65)? "senior":
+                (a>=20)? "adult":
+                (a>13)? "teen":"child";
+        console.log(age2);
+
+        var a=14;
+        var age2=(a>=65)? "senior":
+                (a>=20)? "adult":
+                (a>13)? "teen":"child";
+        console.log(age2);
+
+        var a=30;
+        var age2=(a>=65)? "senior":
+                (a>=20)? "adult":
+                (a>13)? "teen":"child";
+        console.log(age2);
+
+
+        var a=70;
+        var age2=(a>=65)? "senior":
+                (a>=20)? "adult":
+                (a>13)? "teen":"child";
+        console.log(age2);
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,202 @@
+Creating a To-Do List using HTML and JavaScript is a fun project! Here’s how you can build a basic To-Do List with the ability to add tasks, mark them as completed, and remove them.
+
+### Project Structure:
+```
+todo-list/
+│── index.html
+│── style.css
+│── script.js
+```
+
+### HTML Code (index.html):
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script> <!-- Link to JavaScript file -->
+</head>
+<body>
+    <div class="container">
+        <h1>To-Do List</h1>
+        
+        <!-- Input Section -->
+        <div class="input-section">
+            <input type="text" id="taskInput" placeholder="Add a new task">
+            <button onclick="addTask()">Add Task</button>
+        </div>
+
+        <!-- To-Do List -->
+        <ul id="todoList"></ul>
+    </div>
+</body>
+</html>
+```
+
+### CSS Code (style.css):
+```css
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: white;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 400px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Input Section */
+.input-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#taskInput {
+    width: 75%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    width: 20%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* To-Do List */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+li.completed {
+    text-decoration: line-through;
+    background-color: #d3ffd3;
+}
+
+li button {
+    background-color: #f44336;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+li button:hover {
+    background-color: #e53935;
+}
+```
+
+### JavaScript Code (script.js):
+```javascript
+// Function to add a new task
+function addTask() {
+    // Get the input value
+    const taskInput = document.getElementById("taskInput");
+    const taskValue = taskInput.value.trim();
+
+    // Check if the input is empty
+    if (taskValue === "") {
+        alert("Please enter a task.");
+        return;
+    }
+
+    // Create a new list item for the task
+    const li = document.createElement("li");
+
+    // Create a span for the task name
+    const taskText = document.createElement("span");
+    taskText.textContent = taskValue;
+    li.appendChild(taskText);
+
+    // Create a "Remove" button
+    const removeButton = document.createElement("button");
+    removeButton.textContent = "Remove";
+    removeButton.onclick = function() {
+        li.remove();
+    };
+    li.appendChild(removeButton);
+
+    // Add event listener to toggle completed state
+    li.onclick = function() {
+        li.classList.toggle("completed");
+    };
+
+    // Append the task item to the list
+    document.getElementById("todoList").appendChild(li);
+
+    // Clear the input field
+    taskInput.value = "";
+}
+```
+
+### Explanation:
+
+1. **HTML**:
+   - The HTML structure includes an input field for entering tasks, a button to add tasks, and an unordered list (`<ul>`) where the tasks will be displayed.
+   - Each task is wrapped inside a list item (`<li>`), and when a task is clicked, it can be marked as completed (with a line-through).
+   
+2. **CSS**:
+   - The `style.css` file styles the page, input field, button, and tasks.
+   - A completed task is styled with a line-through text decoration and a background color change.
+   - The `Remove` button allows users to delete tasks.
+
+3. **JavaScript**:
+   - The `addTask()` function is triggered when the user clicks the "Add Task" button.
+   - A new `<li>` is created for each task, containing the task name and a "Remove" button.
+   - Clicking a task will toggle its completion state, adding/removing a `completed` class.
+   - Clicking the "Remove" button will delete the task from the list.
+
+### How It Works:
+1. Open `index.html` in your browser.
+2. Enter a task in the input box and click "Add Task".
+3. The task will appear in the list.
+4. Click on the task to mark it as completed (it will be struck through).
+5. Click the "Remove" button next to a task to delete it.
+
+### Example Output:
+- Initially, you'll see a blank page with a header "To-Do List" and an input box with a button "Add Task."
+- After you add a task, it appears in a list with the ability to mark it as completed or delete it.
+
+This is a basic To-Do List using HTML, CSS, and JavaScript. You can extend the functionality further by adding features like storing tasks in localStorage to persist them across page reloads or adding due dates and priorities!

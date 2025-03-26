@@ -1,0 +1,9 @@
+debugger
+while(i<=3){
+    while(j<=10){
+          c=i*j;
+          console.log(i,"*",j,"=",c);
+            j++
+    }
+     i++
+}
